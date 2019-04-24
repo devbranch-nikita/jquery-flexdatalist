@@ -16,7 +16,8 @@
  *
  */
 
-jQuery.fn.flexdatalist = function (_option, _value) {
+(function ($) {
+$.fn.flexdatalist = function (_option, _value) {
     'use strict';
 
     var destroy = function ($flex, clear) {
@@ -1854,8 +1855,9 @@ jQuery.fn.flexdatalist = function (_option, _value) {
         this.init();
     });
 }
+})(jQuery);
 
-jQuery(function ($) {
+(function ($) {
     var $document = $(document);
     // Handle results selection list keyboard shortcuts and events.
     if (!$document.data('flexdatalist')) {
@@ -1920,7 +1922,7 @@ jQuery(function ($) {
     }
 
     jQuery('input.flexdatalist:not(.flexdatalist-set):not(.autodiscover-disabled)').flexdatalist();
-});
+})(jQuery);
 
 (function ($) {
     var jVal = $.fn.val;
