@@ -263,7 +263,7 @@ $.fn.flexdatalist = function (_option, _value) {
                     var keyword = $alias.val(),
                         val = _this.fvalue.get(true),
                         options = _this.options.get();
-                    if (!options.multiple && !options.selectionRequired && keyword.length !== val.length) {
+                    if (!options.multiple && !options.selectionRequired && keyword !== val) {
                         _this.fvalue.extract(keyword);
                     }
                 }
