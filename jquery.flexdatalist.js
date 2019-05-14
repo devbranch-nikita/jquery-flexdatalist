@@ -189,6 +189,11 @@ $.fn.flexdatalist = function (_option, _value) {
                 _this.position();
             };
 
+            // @link https://github.com/sergiodlopes/jquery-flexdatalist/issues/161
+            document.addEventListener('scroll', function (event) {
+              _this.position();
+            }, true);
+
             // Run garbage collector
             this.cache.gc();
 
